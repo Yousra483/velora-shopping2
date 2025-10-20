@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="home-body">
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="video/video backk.MP4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark luxury-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gem me-2"></i>
+                VELORA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            Cart <span class="badge bg-gold cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="contact-container">
+                        <!-- Contact Header -->
+                        <div class="contact-header">
+                            <h1 class="contact-title">
+                                <i class="fas fa-envelope me-3"></i>
+                                Contact Us
+                            </h1>
+                            <p class="contact-subtitle">We're here to help with your luxury needs</p>
+                        </div>
+
+                        <div class="row">
+                            <!-- Contact Form -->
+                            <div class="col-12 col-lg-8">
+                                <form id="contactForm" class="contact-form">
+                                    <div class="form-section">
+                                        <h3 class="section-title">
+                                            <i class="fas fa-paper-plane me-2"></i>
+                                            Send us a Message
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contactName">Full Name *</label>
+                                                    <input type="text" id="contactName" name="contactName" required>
+                                                </div>
+                                            </div><div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contactEmail">Email Address *</label>
+                                                    <input type="email" id="contactEmail" name="contactEmail" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contactSubject">Subject *</label>
+                                            <input type="text" id="contactSubject" name="contactSubject" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contactMessage">Message *</label>
+                                            <textarea id="contactMessage" name="contactMessage" rows="6" required></textarea>
+                                        </div>
+                                        <button type="submit" class="contact-submit-btn">
+                                            <i class="fas fa-paper-plane me-2"></i>
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="col-12 col-lg-4">
+                                <div class="contact-info">
+                                    <h3 class="info-title">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        Get in Touch
+                                    </h3>
+                                    
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h4>Phone</h4>
+                                            <p>+93 70 123 4567</p>
+                                            <p>+93 79 876 5432</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h4>Email</h4>
+                                            <p>info@velora-af.com</p>
+                                            <p>support@velora-af.com</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h4>Address</h4>
+                                            <p>Kabul, Afghanistan</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="info-content"><h4>Business Hours</h4>
+                                            <p>Saturday - Thursday: 8:00 AM - 8:00 PM</p>
+                                            <p>Friday: 10:00 AM - 6:00 PM</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Social Media -->
+                                    <div class="social-section">
+                                        <h4>Follow Us</h4>
+                                        <div class="social-links">
+                                            <a href="#" class="social-link">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a href="#" class="social-link">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" class="social-link">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#" class="social-link">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <h2 class="faq-title">
+                    <i class="fas fa-question-circle me-3"></i>
+                    Frequently Asked Questions
+                </h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day return policy for all unused products in their original packaging. Luxury items may have specific return conditions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we ship worldwide. Shipping costs and delivery times vary by location. Contact us for specific details about your country.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I track my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once your order ships, you'll receive a tracking number via email. You can also check your order status in your account dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer warranty on products?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our products come with manufacturer's warranty. The warranty period varies by product category and brand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="luxury-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>VELORA</h3>
+                    <p>Your premier destination for luxury products. Experience excellence with every purchase.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yousra.codes?igsh=MTBjMmJscmpvNjBwaQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/yousramust46914?s=11"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=mobile"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                        <li><a href="products.html?category=laptop"><i class="fas fa-laptop"></i> Laptops</a></li>
+                        <li><a href="products.html?category=perfume"><i class="fas fa-wine-bottle"></i> Perfumes</a></li>
+                        <li><a href="products.html?category=skincare"><i class="fas fa-cream"></i> Skincare</a></li>
+                        <li><a href="products.html?category=watch"><i class="fas fa-clock"></i> Watches</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+93701234567"><i class="fas fa-phone"></i> +93 785698543</a></li>
+                        <li><a href="mailto:info@velora-af.com"><i class="fas fa-envelope"></i> info@velora-af.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Kabul, Afghanistan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                </div>
+                <p>&copy; 2024 Velora Luxury Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/contact.js"></script>
+</body>
+</html>

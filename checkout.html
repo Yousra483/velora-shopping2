@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora | Checkout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Fix for select options */
+        .form-group select {
+            color: var(--text-light) !important;
+            background: rgba(255, 255, 255, 0.05) !important;
+        }
+        
+        .form-group select option {
+            background: #1a1a1a !important;
+            color: #ffffff !important;
+            padding: 10px !important;
+        }
+    </style>
+</head>
+<body class="home-body">
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="video/video backk.MP4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark luxury-nav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gem me-2"></i>
+                VELORA
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="home.html">Home</a>
+                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="cart.html">
+                    <i class="fas fa-shopping-bag"></i>
+                    Cart <span class="badge bg-gold cart-count">0</span>
+                </a>
+                <a class="nav-link active" href="checkout.html">Checkout</a>
+                <li class="nav-item">  <a class="nav-link" href="contact.html">Contact</a></li>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="checkout-container">
+                        <!-- Checkout Header -->
+                        <div class="checkout-header">
+                            <h1 class="checkout-title">
+                                <i class="fas fa-credit-card me-3"></i>
+                                Complete Your Purchase
+                            </h1>
+                            <p class="checkout-subtitle">Final step to luxury ownership</p>
+                        </div>
+
+                        <div class="row">
+                            <!-- Checkout Form -->
+                            <div class="col-12 col-lg-8">
+                                <form id="checkoutForm" class="checkout-form">
+                                    <!-- Personal Information -->
+                                    <div class="form-section">
+                                        <h3 class="section-title">
+                                            <i class="fas fa-user me-2"></i>
+                                            Personal Information
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="firstName">First Name *</label>
+                                                    <input type="text" id="firstName" name="firstName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group"><label for="lastName">Last Name *</label>
+                                                    <input type="text" id="lastName" name="lastName" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping Address -->
+                                    <div class="form-section">
+                                        <h3 class="section-title">
+                                            <i class="fas fa-truck me-2"></i>
+                                            Shipping Address
+                                        </h3>
+                                        <div class="form-group">
+                                            <label for="address">Street Address *</label>
+                                            <input type="text" id="address" name="address" required>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="city">City *</label>
+                                                    <input type="text" id="city" name="city" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="zipCode">ZIP Code *</label>
+                                                    <input type="text" id="zipCode" name="zipCode" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country">Country *</label>
+                                            <select id="country" name="country" required>
+                                                <option value="">Select Country</option>
+                                                <option value="AF">Afghanistan</option>
+                                                <option value="US">United States</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="AU">Australia</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="FR">France</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Method -->
+                                    <div class="form-section">
+                                        <h3 class="section-title">
+                                            <i class="fas fa-credit-card me-2"></i>
+                                            Payment Method</h3>
+                                        <div class="payment-methods">
+                                            <div class="payment-option">
+                                                <input type="radio" id="creditCard" name="paymentMethod" value="credit" checked>
+                                                <label for="creditCard">
+                                                    <i class="fas fa-credit-card"></i>
+                                                    Credit Card
+                                                </label>
+                                            </div>
+                                            <div class="payment-option">
+                                                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                                <label for="paypal">
+                                                    <i class="fab fa-paypal"></i>
+                                                    PayPal
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Credit Card Form -->
+                                        <div class="credit-card-form" id="creditCardForm">
+                                            <div class="form-group">
+                                                <label for="cardNumber">Card Number *</label>
+                                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="expiryDate">Expiry Date *</label>
+                                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="cvv">CVV *</label>
+                                                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cardName">Name on Card *</label>
+                                                <input type="text" id="cardName" name="cardName">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Terms and Conditions -->
+                                    <div class="form-section">
+                                        <div class="form-group terms-group">
+                                            <input type="checkbox" id="terms" name="terms" required>
+                                            <label for="terms">
+                                                I agree to the <a href="#terms">Terms and Conditions</a> 
+                                                and <a href="#privacy">Privacy Policy</a> *
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="checkout-submit-btn"><i class="fas fa-lock me-2"></i>
+                                        Complete Purchase
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Order Summary -->
+                            <div class="col-12 col-lg-4">
+                                <div class="order-summary">
+                                    <h3 class="summary-title">Order Summary</h3>
+                                    <div class="order-items" id="orderItems">
+                                        <!-- Order items will be loaded here -->
+                                    </div>
+                                    <div class="order-totals">
+                                        <div class="total-row">
+                                            <span>Subtotal:</span>
+                                            <span id="orderSubtotal">$0.00</span>
+                                        </div>
+                                        <div class="total-row">
+                                            <span>Shipping:</span>
+                                            <span id="orderShipping">$15.00</span>
+                                        </div>
+                                        <div class="total-row">
+                                            <span>Tax:</span>
+                                            <span id="orderTax">$0.00</span>
+                                        </div>
+                                        <div class="total-row grand-total">
+                                            <span>Total:</span>
+                                            <span id="orderTotal">$0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/checkout.js"></script>
+    <!-- Luxury Footer -->
+    <footer class="luxury-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>VELORA</h3>
+                    <p>Your premier destination for luxury products. Experience excellence with every purchase.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yousra.codes?igsh=MTBjMmJscmpvNjBwaQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/yousramust46914?s=11"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+                        <li><a href="checkout.html"><i class="fas fa-credit-card"></i> Checkout</a></li>
+                          <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=mobile"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                        <li><a href="products.html?category=laptop"><i class="fas fa-laptop"></i> Laptops</a></li>
+                        <li><a href="products.html?category=perfume"><i class="fas fa-wine-bottle"></i> Perfumes</a></li>
+                        <li><a href="products.html?category=skincare"><i class="fas fa-cream"></i> Skincare</a></li>
+                        <li><a href="products.html?category=watch"><i class="fas fa-clock"></i> Watches</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +93 0785698543</a></li>
+                        <li><a href="mailto:info@velora.com"><i class="fas fa-envelope"></i> info@velora-af.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Kabul, Afghanistan</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fab fa-cc-apple-pay" title="Apple Pay"></i>
+                </div>
+                <p>&copy; 2024 Velora Luxury Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

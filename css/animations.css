@@ -1,0 +1,73 @@
+/* ===== CIRCLE LOGIN ANIMATIONS ===== */
+.circle-login-card {
+    animation: circleAppear 1.5s ease-out;
+}
+
+@keyframes circleAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.circle-logo {
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6),
+                    0 0 40px rgba(212, 175, 55, 0.3);
+    }
+}
+
+.circle-input-group {
+    animation: slideUpInput 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.circle-input-group:nth-child(1) { animation-delay: 0.3s; }
+.circle-input-group:nth-child(2) { animation-delay: 0.5s; }
+.circle-input-group:nth-child(3) { animation-delay: 0.7s; }
+
+@keyframes slideUpInput {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circle-login-btn {
+    animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* ===== SUCCESS ANIMATION ===== */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.login-success {
+    animation: successPulse 1s ease-in-out;
+}
